@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: rgb(156, 156, 235);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1> Olá, Mundo! </h1>
+    <p>Já me livrei da maldição.</p>
+
+    <script>
+        
+        //var n1 = Number.parseInt(window.prompt('Digite um número'))
+        //var n2 = Number.parseFloat(window.prompt('Digite outro número'))
+
+        var n1 = Number(window.prompt('Digite um número')) // Usando apenas Number, o JS consegue converter para o tipo inteiro ou float
+        var n2 = Number(window.prompt('Digite outro número')) // Number está nas versões mais recentes do EcmaScript
+        var s = n1 + n2
+        window.alert('A soma dos valores é ' + String(s))
+
+        // Para converter de String para Numero temos duas formas:
+        // String(n) 
+        // ou 
+        // n.toString()
+
+        // Formatando Strings
+        // var t = 'JavaScript'
+        // 'Eu estou aprendendo t'      não faz interpolação
+        // 'Eu estou aprendendo' + t    usa concatenação
+        // `Eu estou aprendendo` ${t}   usa template string 
+        // t.length                     quantos caracteres a string tem 
+        // t.toUpperCase()              tudo para MAIÚSCULAS
+        // t.toLowerCase()              tudo para minúsculas
+
+        // usando template string
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+
+    </script>
+    
+</body>
+</html>
