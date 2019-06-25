@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(102, 133, 235);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <div name="msg">Clique em mim 02</div>
+    <div class="msg">Clique em mim 03</div>
+    <script>
+        var corpo = window.document.body
+        
+        // getElementsByTagName vai pegar a primeira tag que eu quero selecionar, ou seja, no índice 0
+        var p1 = window.document.getElementsByTagName('p')[0]
+        // innerText = é o texto que está dentro do parágrafo
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        
+        // manipulando a cor do texto do parágrafo
+        p1.style.color = 'blue'
+
+        // manipulando a cor do plano de fundo 
+        corpo.style.background = 'red'
+
+        var p2 = window.document.getElementsByTagName('p')[1]
+        document.write(p2.innerHTML) // innerHTML puxa com a formatação, nesse caso o negrito
+
+        // window.alert(p2.innerHTML)
+        
+        //Manipulando a div
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        // Trocando o texto que está na div
+        // d.innerText = 'Estou aguardando...'
+        
+        // Também pode ser da seguinte forma, porém o comando fica muito grande.
+        window.document.getElementById('msg').innerText = 'Olá, Mundo!'
+
+        var d2 = window.document.getElementsByName('msg')[1]
+        d2.innerText = 'Olá, Mundo!'
+
+        var d3 = window.document.getElementsByClassName('msg')[1]
+        d3.innerText = 'Olá, Mundo!'
+
+        var d4 = window.document.querySelector('div#msg')
+        d4.style.color = 'blue'
+
+    </script>
+</body>
+</html>
